@@ -1,9 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const loadCartFromLocalStorage = () => {
+  try {
+    const serializedState = localStorage.getItem('paradiseNurseryCart');
+    if (serializedState === null) {
+      return [];
+    }
+    return JSON.parse(serializedState);
+  } catch (err) {
+    // Fall back to empty array if data is invalid or corrupted
+    return []; 
+  }
+};
+
 export const cartSlice = createSlice({
   name: 'cart',
   initialState: {
-    items: [], // Initialize items as an empty array
+    items: loadCartFromLocalStorage(), // Initialize items from localStorage
   },
   reducers: {
     addToCart: (state, action) => {
