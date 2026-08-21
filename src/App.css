@@ -1,0 +1,53 @@
+/* Landing Page Specific Styles */
+.landing-page-background {
+  /* Using a reliable beautiful greenhouse/nursery background image from Unsplash */
+  background-image: url('https://images.unsplash.com/photo-1466692476877-3392426f1a43?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-content-overlay {
+  background-color: rgba(255, 255, 255, 0.85); /* Readable overlay so text remains visible */
+  padding: 40px 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.company-name {
+  color: #2e8b57;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.company-description {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.get-started-btn {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.get-started-btn:hover {
+  background-color: #246b43;
+  transform: translateY(-2px);
+}
