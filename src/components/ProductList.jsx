@@ -4,28 +4,28 @@ import { addToCart } from '../redux/CartSlice';
 
 const plantsArray = [
   // Category 1: Indoor Plants
-  { id: 1, name: "Snake Plant", price: 15, category: "Indoor Plants", image: "https://images.unsplash.com/photo-1591152849187-578d052d9b60?w=300&q=80" },
-  { id: 2, name: "Spider Plant", price: 12, category: "Indoor Plants", image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=300&q=80" },
-  { id: 3, name: "Peace Lily", price: 18, category: "Indoor Plants", image: "https://images.unsplash.com/photo-1487798452839-c748a707a6b2?w=300&q=80" },
-  { id: 4, name: "Monstera Deliciosa", price: 25, category: "Indoor Plants", image: "https://images.unsplash.com/photo-1472152083436-a6eede6efad9?w=300&q=80" },
-  { id: 5, name: "Fiddle Leaf Fig", price: 30, category: "Indoor Plants", image: "https://images.unsplash.com/photo-1512428813834-c702c7702b78?w=300&q=80" },
-  { id: 6, name: "Pothos", price: 10, category: "Indoor Plants", image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=300&q=80" },
+  { id: 1, name: "Snake Plant", price: 15, category: "Indoor Plants", image: import.meta.env.BASE_URL + "plants/snake-plant.svg" },
+  { id: 2, name: "Spider Plant", price: 12, category: "Indoor Plants", image: import.meta.env.BASE_URL + "plants/spider-plant.svg" },
+  { id: 3, name: "Peace Lily", price: 18, category: "Indoor Plants", image: import.meta.env.BASE_URL + "plants/peace-lily.svg" },
+  { id: 4, name: "Monstera Deliciosa", price: 25, category: "Indoor Plants", image: import.meta.env.BASE_URL + "plants/monstera.svg" },
+  { id: 5, name: "Fiddle Leaf Fig", price: 30, category: "Indoor Plants", image: import.meta.env.BASE_URL + "plants/zz-plant.svg" },
+  { id: 6, name: "Pothos", price: 10, category: "Indoor Plants", image: import.meta.env.BASE_URL + "plants/rubber-plant.svg" },
 
   // Category 2: Succulents
-  { id: 7, name: "Aloe Vera", price: 14, category: "Succulents", image: "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?w=300&q=80" },
-  { id: 8, name: "Jade Plant", price: 16, category: "Succulents", image: "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=300&q=80" },
-  { id: 9, name: "Echeveria", price: 8, category: "Succulents", image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?w=300&q=80" },
-  { id: 10, name: "Zebra Plant", price: 11, category: "Succulents", image: "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=300&q=80" },
-  { id: 11, name: "String of Pearls", price: 15, category: "Succulents", image: "https://images.unsplash.com/photo-1510265236892-329bfd7de7a1?w=300&q=80" },
-  { id: 12, name: "Burro's Tail", price: 13, category: "Succulents", image: "https://images.unsplash.com/photo-1520108930777-a87e59b9e843?w=300&q=80" },
+  { id: 7, name: "Aloe Vera", price: 14, category: "Succulents", image: import.meta.env.BASE_URL + "plants/aloe-vera.svg" },
+  { id: 8, name: "Jade Plant", price: 16, category: "Succulents", image: import.meta.env.BASE_URL + "plants/jade-plant.svg" },
+  { id: 9, name: "Echeveria", price: 8, category: "Succulents", image: import.meta.env.BASE_URL + "plants/echeveria.svg" },
+  { id: 10, name: "Zebra Plant", price: 11, category: "Succulents", image: import.meta.env.BASE_URL + "plants/zebra-plant.svg" },
+  { id: 11, name: "String of Pearls", price: 15, category: "Succulents", image: import.meta.env.BASE_URL + "plants/string-of-pearls.svg" },
+  { id: 12, name: "Burro's Tail", price: 13, category: "Succulents", image: import.meta.env.BASE_URL + "plants/burros-tail.svg" },
 
   // Category 3: Flowering Plants
-  { id: 13, name: "African Violet", price: 12, category: "Flowering Plants", image: "https://images.unsplash.com/photo-1416879572791-810ce84b125e?w=300&q=80" },
-  { id: 14, name: "Orchid", price: 28, category: "Flowering Plants", image: "https://images.unsplash.com/photo-1582276536582-84b80b721e78?w=300&q=80" },
-  { id: 15, name: "Anthurium", price: 22, category: "Flowering Plants", image: "https://images.unsplash.com/photo-1585805561089-cc7c73db2f6d?w=300&q=80" },
-  { id: 16, name: "Begonia", price: 17, category: "Flowering Plants", image: "https://images.unsplash.com/photo-1605007521568-d064fc674f74?w=300&q=80" },
-  { id: 17, name: "Christmas Cactus", price: 19, category: "Flowering Plants", image: "https://images.unsplash.com/photo-1517487217961-460395353846?w=300&q=80" },
-  { id: 18, name: "Hibiscus", price: 24, category: "Flowering Plants", image: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=300&q=80" }
+  { id: 13, name: "African Violet", price: 12, category: "Flowering Plants", image: import.meta.env.BASE_URL + "plants/african-violet.svg" },
+  { id: 14, name: "Orchid", price: 28, category: "Flowering Plants", image: import.meta.env.BASE_URL + "plants/orchid.svg" },
+  { id: 15, name: "Anthurium", price: 22, category: "Flowering Plants", image: import.meta.env.BASE_URL + "plants/anthurium.svg" },
+  { id: 16, name: "Begonia", price: 17, category: "Flowering Plants", image: import.meta.env.BASE_URL + "plants/begonia.svg" },
+  { id: 17, name: "Christmas Cactus", price: 19, category: "Flowering Plants", image: import.meta.env.BASE_URL + "plants/christmas-cactus.svg" },
+  { id: 18, name: "Hibiscus", price: 24, category: "Flowering Plants", image: import.meta.env.BASE_URL + "plants/hibiscus.svg" }
 ];
 
 const ProductList = () => {
